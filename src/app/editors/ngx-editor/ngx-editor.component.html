@@ -1,0 +1,15 @@
+<div class="container">
+    <header class="header">
+      <h1>NGX Editor</h1>  
+    </header>
+    <form [formGroup]="form">
+			<div class="editor">
+				<ngx-editor-menu [editor]="editor" [toolbar]="toolbar">
+				</ngx-editor-menu>
+				<ngx-editor [editor]="editor" formControlName="editorContent">
+        <ngx-editor-floating-menu [editor]="editor"></ngx-editor-floating-menu>
+				</ngx-editor>
+			</div>
+		</form>
+    <p>Type and select a content to use floating menu</p>
+</div>

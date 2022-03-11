@@ -1,22 +1,12 @@
-import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-kolkov-angular-editor',
+  templateUrl: './kolkov-angular-editor.component.html',
+  styleUrls: ['./kolkov-angular-editor.component.scss']
 })
-export class AppComponent  {
-  editors: string [] = ['Kolkov Angular Editor', 'NGX Quill', 'Angular Froala', 'NGX Editor', 'CKEditor5']
-  
-  editorFormControl = new FormControl('');
-
-  currentEditor = '';
-
-  changeEditor(e: any) {
-    this.currentEditor = e.target.value;
-  }
+export class KolkovAngularEditorComponent {
 
   htmlContent = '';
 
@@ -50,5 +40,5 @@ export class AppComponent  {
       },
     ]
   };
-}
 
+}

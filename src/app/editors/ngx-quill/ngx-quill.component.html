@@ -1,0 +1,10 @@
+<div class="container">
+    <header class="header">
+      <h1>NGX Quill</h1>  
+    </header>
+        <quill-editor [(ngModel)]="htmlContent"
+        placeholder="Enter Text"
+        [modules]="config"
+        (onSelectionChanged)="onSelectionChanged($event)"
+        (onContentChanged)="onContentChanged($event)"></quill-editor>
+</div>
